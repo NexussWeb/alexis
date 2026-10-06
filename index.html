@@ -74,8 +74,8 @@ $("wa").href="https://wa.me/526692407326";
 var vc="BEGIN:VCARD\nVERSION:3.0\nFN:Alexis Castro\nORG:Red Pacifik Inmobiliaria\nTITLE:Asesor inmobiliario\nTEL;TYPE=CELL:"+TEL+"\nEMAIL:alexis_alsibar@hotmail.com\nURL:https://redpacifikinmobiliaria.com.mx\nEND:VCARD";
 try{new QRCode($("qr"),{text:vc,width:120,height:120,correctLevel:QRCode.CorrectLevel.M});}catch(e){$("qr").textContent="QR no disponible";}
 function say(t){$("msg").textContent=t}
-$("copy").onclick=function(){try{navigator.clipboard.writeText(location.href).then(function(){say("Enlace copiado")},function(){say("Copia el enlace desde la barra")});}catch(e){say("Copia el enlace desde la barra")}};
-$("share").onclick=function(){try{if(navigator.share){navigator.share({title:"Alexis Castro · Red Pacifik",text:"Mi tarjeta de contacto",url:location.href}).catch(function(){});}else{$("copy").click();}}catch(e){$("copy").click();}};
+$("copy").onclick=function(){try{navigator.clipboard.writeText("https://nexussweb.github.io/alexis/").then(function(){say("Enlace copiado")},function(){say("Copia el enlace desde la barra")});}catch(e){say("Copia el enlace desde la barra")}};
+$("share").onclick=function(){try{if(navigator.share){navigator.share({title:"Alexis Castro · Red Pacifik",text:"Mi tarjeta de contacto",url:"https://nexussweb.github.io/alexis/"}).catch(function(){});}else{$("copy").click();}}catch(e){$("copy").click();}};
 </script>
 </body>
 </html>
