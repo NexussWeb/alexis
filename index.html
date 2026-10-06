@@ -3,6 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Alexis Castro · Asesor inmobiliario">
+<meta property="og:description" content="Red Pacifik Inmobiliaria · Compra y venta de propiedades">
+<meta property="og:image" content="https://nexussweb.github.io/alexis/preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Alexis Castro, asesor inmobiliario en Red Pacifik. Compra y venta de propiedades.">
 <title>Alexis Castro · Red Pacifik</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
@@ -66,8 +74,8 @@ $("wa").href="https://wa.me/526692407326";
 var vc="BEGIN:VCARD\nVERSION:3.0\nFN:Alexis Castro\nORG:Red Pacifik Inmobiliaria\nTITLE:Asesor inmobiliario\nTEL;TYPE=CELL:"+TEL+"\nEMAIL:alexis_alsibar@hotmail.com\nURL:https://redpacifikinmobiliaria.com.mx\nEND:VCARD";
 try{new QRCode($("qr"),{text:vc,width:120,height:120,correctLevel:QRCode.CorrectLevel.M});}catch(e){$("qr").textContent="QR no disponible";}
 function say(t){$("msg").textContent=t}
-$("copy").onclick=function(){try{navigator.clipboard.writeText("https://claude.ai/artifact/945Fn1g6NZVxX2icAV7guK").then(function(){say("Enlace copiado")},function(){say("Copia el enlace desde la barra")});}catch(e){say("Copia el enlace desde la barra")}};
-$("share").onclick=function(){try{if(navigator.share){navigator.share({title:"Alexis Castro · Red Pacifik",text:"Mi tarjeta de contacto",url:"https://claude.ai/artifact/945Fn1g6NZVxX2icAV7guK"}).catch(function(){});}else{$("copy").click();}}catch(e){$("copy").click();}};
+$("copy").onclick=function(){try{navigator.clipboard.writeText(location.href).then(function(){say("Enlace copiado")},function(){say("Copia el enlace desde la barra")});}catch(e){say("Copia el enlace desde la barra")}};
+$("share").onclick=function(){try{if(navigator.share){navigator.share({title:"Alexis Castro · Red Pacifik",text:"Mi tarjeta de contacto",url:location.href}).catch(function(){});}else{$("copy").click();}}catch(e){$("copy").click();}};
 </script>
 </body>
 </html>
